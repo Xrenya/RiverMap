@@ -12,7 +12,7 @@ import plotly.graph_objs as go
 PORT = 8050
 
 
-df = pd.read_excel("kamchatka.xls")
+df = pd.read_excel("kamchatka.cvs")
 df.fillna(value=0, inplace=True)
 
 num_cols = [
