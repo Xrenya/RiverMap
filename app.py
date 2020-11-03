@@ -58,13 +58,7 @@ app.config.suppress_callback_exceptions = True
 
 df_chem = pd.DataFrame(np.max(df[chem_cols], axis=0), columns=["chemicals"])
 dff = pd.DataFrame(data={"chemicals": chem_cols, "values": np.max(df[chem_cols], axis=0)})
-layout = go.Layout(
-    xaxis=XAxis(
-        tickangle=-45
-    ),
-    bargap=0.05
-)
-fig_bar = px.bar(dff, x="chemicals", y="values", labels={'chemicals':'Химикаты', "values": "Превышения (раз)"}, color="values", layout=layout)
+fig_bar = px.bar(dff, x="chemicals", y="values", labels={'chemicals':'Химикаты', "values": "Превышения (раз)"}, color="values")
 
 
 app.layout = html.Div([
