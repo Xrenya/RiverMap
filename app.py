@@ -5,7 +5,6 @@ import dash
 import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
-from flask import Flask
 import os
 import plotly.graph_objs as go
 from random import randint
@@ -13,7 +12,7 @@ from random import randint
 PORT = 8051
 
 
-df = pd.read_excel("kamchatka.csv")
+df = pd.read_csv("kamchatka.csv")
 df.fillna(value=0, inplace=True)
 
 num_cols = [
