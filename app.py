@@ -5,6 +5,7 @@ import dash
 import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
+from flask import Flask
 
 import pandas as pd
 import plotly.graph_objs as go
@@ -53,7 +54,7 @@ app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
 # Associating server
 server = app.server
-app.title = 'River Pollution'
+app.title = 'Pollution map'
 app.config.suppress_callback_exceptions = True
 
 df_chem = pd.DataFrame(np.max(df[chem_cols], axis=0), columns=["chemicals"])
