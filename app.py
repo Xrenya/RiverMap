@@ -12,7 +12,7 @@ from random import randint
 PORT = 8051
 
 
-df = pd.read_csv("kamchatka.csv")
+df = pd.read_excel("kamchatka.xls")
 df.fillna(value=0, inplace=True)
 
 num_cols = [
