@@ -8,6 +8,7 @@ from dash.dependencies import Input, Output
 from flask import Flask
 import os
 import plotly.graph_objs as go
+from random import randint
 
 PORT = 8050
 
